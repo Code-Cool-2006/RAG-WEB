@@ -26,7 +26,7 @@ COLLECTION_NAME = "notes"
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 100
 EMBED_MODEL = "text-embedding-004"
-LLM_MODEL = "gemini-1.5-flash"
+LLM_MODEL = "gemini-3.1-flash-lite"
 TOP_K = 4
 
 # Create data directories
