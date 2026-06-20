@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: notebook-rag
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PERSISTENT_STORAGE_PATH
+        value: /app/persistent_data
+    disk:
+      name: rag-storage
+      mountPath: /app/persistent_data
+      sizeGB: 1
