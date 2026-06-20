@@ -1,15 +1,16 @@
 services:
   - type: web
     name: notebook-rag
-    env: docker
+    env: python
     plan: free
-    dockerfilePath: Dockerfile
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: GEMINI_API_KEY
         sync: false
       - key: PERSISTENT_STORAGE_PATH
-        value: /app/persistent_data
+        value: /opt/render/project/src/persistent_data
     disk:
       name: rag-storage
-      mountPath: /app/persistent_data
+      mountPath: /opt/render/project/src/persistent_data
       sizeGB: 1
