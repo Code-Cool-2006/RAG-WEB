@@ -25,8 +25,8 @@ CHROMA_DIR = os.path.join(PERSISTENT_ROOT, "chroma_db")
 COLLECTION_NAME = "notes"
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 100
-EMBED_MODEL = "gemini-embedding-2-preview"
-LLM_MODEL = "gemini-3.5-flash"
+EMBED_MODEL = "text-embedding-004"
+LLM_MODEL = "gemini-1.5-flash"
 TOP_K = 4
 
 # Create data directories
